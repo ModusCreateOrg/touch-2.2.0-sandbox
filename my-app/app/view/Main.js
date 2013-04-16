@@ -23,7 +23,7 @@ Ext.define('MyApp.view.Main', {
                 },{
                     xtype: 'button',
                     cls: 'modus-button default',
-                    text: 'Default Button'
+                    text: '<i class="icon-home"></i> Default Button'
                 },{
                     xtype: 'button',
                     cls: 'modus-button primary',
