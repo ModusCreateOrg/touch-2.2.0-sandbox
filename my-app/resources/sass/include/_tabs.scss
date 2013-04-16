@@ -1,0 +1,19 @@
+.x-tabbar {
+  border: none;
+  background: $baseColor;
+  .x-tab {
+    background: none;
+    border: none;
+    .x-button-label {
+      color: white;
+      padding: 10px 15px;
+      text-align: center;
+      font-size: 13px
+    }
+    &.x-tab-active {
+      .x-button-label {
+        color: #02b99a;
+      }
+    }
+  }
+}

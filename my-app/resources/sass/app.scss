@@ -1,0 +1,22 @@
+/* include font-awesome */
+@include icon-font('Pictos', inline-font-files('pictos/pictos-web.woff', woff, 'pictos/pictos-web.ttf', truetype,'pictos/pictos-web.svg', svg));
+
+
+/* import the sencha defaults */
+@import 'sencha-touch/base';
+@import 'sencha-touch/base/all';
+
+/* our custom imports */
+@import 'include/variables';
+@import 'include/buttons';
+@import 'include/toolbar';
+@import 'include/tabs';
+
+/* other custom css */
+* {
+  font-family: "Noto Sans";
+}
+
+html, body {
+  background: white;
+}

@@ -1,0 +1,32 @@
+@mixin modus-button($color) {
+  @include transition(all .25s ease);
+  @include border-radius(6px);
+  margin-bottom: 15px;
+  font-size: 15px;
+  background: $color;
+  border: none;
+  color: white;
+  text-decoration: none;
+  .x-button-label {
+    padding: 10px 0;
+  }
+  &.x-button-pressing {
+    background: darken($color, 10);
+  }
+}
+
+.default {
+  @include modus-button($baseColor);
+}
+
+.primary {
+  @include modus-button($primaryColor);
+}
+
+.info {
+  @include modus-button(#2c97de);
+}
+
+.danger {
+  @include modus-button(#e94b35);
+}
