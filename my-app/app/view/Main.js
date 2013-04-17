@@ -3,7 +3,9 @@ Ext.define('MyApp.view.Main', {
     xtype: 'main',
     requires: [
         'Ext.TitleBar',
-        'Ext.Video'
+        'Ext.dataview.List',
+        'Ext.Video',
+        'Ext.data.Store'
     ],
     config: {
         tabBarPosition: 'bottom',
@@ -19,11 +21,16 @@ Ext.define('MyApp.view.Main', {
                 items: [{
                     docked: 'top',
                     xtype: 'titlebar',
-                    title: 'Customized Base Theme',
-                },{
+                    title: 'Modus Theme',            
+                },
+                {
+                    html: '<strong>Check out these here buttons!</strong>',
+                    margin: '0 0 15 0'
+                },
+                {
                     xtype: 'button',
                     cls: 'modus-button default',
-                    text: '<i class="icon-home"></i> Default Button'
+                    text: 'Default Button'
                 },{
                     xtype: 'button',
                     cls: 'modus-button primary',
@@ -36,24 +43,34 @@ Ext.define('MyApp.view.Main', {
                     xtype: 'button',
                     cls: 'modus-button danger',
                     text: 'Danger Button'
+                },{
+                    xtype: 'button',
+                    cls: 'modus-button default',
+                    action: 'loadList',
+                    text: '<i class="icon-reorder"></i> View List Styles'
                 }]
             },
             {
-                title: 'Get Started',
-                iconCls: 'action',
+                title: 'List',
                 items: [
                     {
                         docked: 'top',
                         xtype: 'titlebar',
-                        title: 'Getting Started'
+                        title: 'List'
                     },
                     {
-                        xtype: 'video',
-                        url: 'http://av.vimeo.com/64284/137/87347327.mp4?token=1330978144_f9b698fea38cd408d52a2393240c896c',
-                        posterUrl: 'http://b.vimeocdn.com/ts/261/062/261062119_640.jpg'
+                        xtype: 'list',
+                        itemTpl: '<div>{title}</div>',
+                        data: [
+                            { title: 'Item 1' },
+                            { title: 'Item 2' },
+                            { title: 'Item 3' },
+                            { title: 'Item 4' }
+                        ]
                     }
                 ]
-            }
+            },
+
         ]
     }
 });
